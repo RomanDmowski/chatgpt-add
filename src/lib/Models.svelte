@@ -9,8 +9,8 @@
   import { chatModels as petalsModels } from './providers/petals/models.svelte'
 
 export const supportedChatModels : Record<string, ModelDetail> = {
-    ...openAiModels,
-    ...petalsModels
+    ...openAiModels
+    // ...petalsModels
 }
 
 export const supportedImageModels : Record<string, ModelDetail> = {
@@ -18,8 +18,8 @@ export const supportedImageModels : Record<string, ModelDetail> = {
 }
 
 const lookupList = {
-    ...supportedChatModels,
-    ...supportedImageModels
+    ...supportedChatModels
+    // ...supportedImageModels
 }
 
 Object.entries(lookupList).forEach(([k, v]) => {

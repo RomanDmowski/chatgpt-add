@@ -26,9 +26,10 @@ import { getChatModelOptions, getModelDetail, getTokens } from './Models.svelte'
 export const getDefaultModel = async (): Promise<Model> => {
   if (!get(apiKeyStorage)) return 'stabilityai/StableBeluga2'
 
-  const models = await getChatModelOptions()
+  //const models = await getChatModelOptions()
 
-  return models[0].text
+  //return models[0].text
+  return 'gpt-4o'
 }
 
 export const getChatSettingList = (): ChatSetting[] => {

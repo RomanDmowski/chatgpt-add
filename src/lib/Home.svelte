@@ -23,6 +23,11 @@
         $lastChatId = 0
         replace(`/chat/${chatId}`)
       }
+      else {
+        // '/chat/new'
+        replace(`/chat/new`)
+      }
+      
     }
     $lastChatId = 0
   })

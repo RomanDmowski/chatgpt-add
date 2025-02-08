@@ -25,6 +25,10 @@
   }
 
   // The definition of the routes with some conditions
+
+  // const routes = {
+  //   '/': Home,
+
   const routes = {
     '/': Home,
 
@@ -42,7 +46,12 @@
       }
     }),
 
-    '*': Home
+    '*': wrap({
+      component: NewChat,
+      conditions: () => {
+        return hasActiveModels()
+      }
+    })
   }
 
   const onLocationChange = (...args:any) => {

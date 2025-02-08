@@ -28,9 +28,15 @@
 
   const chatDefaults = getChatDefaults()
   
+  // export const getApiKey = (): string => {
+  //   return get(apiKeyStorage)
+  // }
+
   export const getApiKey = (): string => {
-    return get(apiKeyStorage)
+    return import.meta.env.VITE_OPENAI_API_KEY
   }
+
+  //  import.meta.env.VITE_OPENAI_API_KEY
 
   // Avoid user input errors. Trailing slashes or "/v1" break
   // the API.  So we clean it up here.

@@ -13,6 +13,9 @@ dist-ssr
 *.local
 src-tauri/gen/
 
+# Environments
+.env
+
 # Editor directories and files
 .vscode/*
 !.vscode/settings.json

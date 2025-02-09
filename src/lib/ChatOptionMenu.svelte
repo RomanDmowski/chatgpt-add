@@ -161,12 +161,12 @@
 
 <div class="dropdown {style}" class:is-active={showChatMenu} use:clickOutside={() => { showChatMenu = false }}>
   <div class="dropdown-trigger">
-    <button class="button is-ghost default-text" aria-haspopup="true" 
+    <!-- <button class="button is-ghost default-text" aria-haspopup="true" 
       aria-controls="dropdown-menu3" 
       on:click|preventDefault|stopPropagation={() => { showChatMenu = !showChatMenu }}
       >
       <span class="icon "><Fa icon={faEllipsis}/></span>
-    </button>
+    </button> -->
   </div>
   <div class="dropdown-menu" id="dropdown-menu3" role="menu">
     <div class="dropdown-content">

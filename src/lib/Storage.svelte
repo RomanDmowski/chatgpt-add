@@ -28,13 +28,13 @@
 
   const chatDefaults = getChatDefaults()
   
-  // export const getApiKey = (): string => {
-  //   return get(apiKeyStorage)
-  // }
-
   export const getApiKey = (): string => {
-    return import.meta.env.VITE_OPENAI_API_KEY
+    return get(apiKeyStorage)
   }
+
+  // export const getApiKey = (): string => {
+  //   return import.meta.env.VITE_OPENAI_API_KEY
+  // }
 
   //  import.meta.env.VITE_OPENAI_API_KEY
 

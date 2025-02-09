@@ -10,6 +10,7 @@
 
   $: apiKey = $apiKeyStorage
   const openAiEndpoint = $globalStorage.openAiEndpoint || ''
+  setOpenAI({apiKey : import.meta.env.VITE_OPENAI_API_KEY})
   let showPetalsSettings = $globalStorage.enablePetals
   let pedalsEndpoint = $globalStorage.pedalsEndpoint
   let hasModels = hasActiveModels()

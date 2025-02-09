@@ -29,7 +29,14 @@ export const getDefaultModel = async (): Promise<Model> => {
   //const models = await getChatModelOptions()
 
   //return models[0].text
-  return 'gpt-4o'
+  const defaultModel = import.meta.env.VITE_DEFAULT_OPENAI_MODEL
+
+  if (!defaultModel) {
+    console.warn('DEFAULT_OPENAI_MODEL not found in environment variables')
+    return 'gpt-4o' // fallback value
+  }
+
+  return defaultModel
 }
 
 export const getChatSettingList = (): ChatSetting[] => {

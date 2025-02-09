@@ -414,7 +414,7 @@
         bind:this={input}
       />
     </p>
-    <p class="control mic" class:is-hidden={!recognition}>
+    <!-- <p class="control mic" class:is-hidden={!recognition}>
       <button class="button" class:is-disabled={chatRequest.updating} class:is-pulse={recording} on:click|preventDefault={recordToggle}
         ><span class="icon"><Fa icon={faMicrophone} /></span></button
       >
@@ -424,7 +424,7 @@
     </p>
     <p class="control queue">
       <button title="Queue message, don't send yet" class:is-disabled={chatRequest.updating} class="button is-ghost" on:click|preventDefault={addNewMessage}><span class="icon"><Fa icon={faArrowUpFromBracket} /></span></button>
-    </p>
+    </p> -->
     {#if chatRequest.updating}
     <p class="control send">
       <button title="Cancel Response" class="button is-danger" type="button" on:click={cancelRequest}><span class="icon">
@@ -446,7 +446,9 @@
     {#each Object.entries(chat.usage || {}) as [model, usage]}
     <p class="is-size-7 running-totals">
       <em>{getModelDetail(model || '').label || model}</em> total <span class="has-text-weight-bold">{usage.total_tokens}</span>
-      tokens ~= <span class="has-text-weight-bold">${getPrice(usage, model).toFixed(6)}</span>
+      tokens
+      <!-- <em>{getModelDetail(model || '').label || model}</em> total <span class="has-text-weight-bold">{usage.total_tokens}</span>
+      tokens ~= <span class="has-text-weight-bold">${getPrice(usage, model).toFixed(6)}</span> -->
     </p>
     {/each}
   </div>

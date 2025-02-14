@@ -2,8 +2,6 @@ services:
   chatgpt_web:
     container_name: chatgpt_web
     restart: always
-    depends_on:
-      - mocked_api
     env_file:
       - .env
     ports:
@@ -13,12 +11,3 @@ services:
     build:
       context: "."
       dockerfile: Dockerfile
-
-  mocked_api:
-    container_name: mocked_api
-    build:
-        context: "."
-        dockerfile: mocked_api/Dockerfile-mockapi
-    restart: always
-    ports:
-      - 5174:5174

@@ -59,7 +59,9 @@
       const newChat = nextChat || prevChat
       if (!newChat) {
         // No other chats, clear all and go to home
-        replace('/').then(() => { deleteChat(chat.id) })
+        replace('/chat/new').then(() => { deleteChat(chat.id) })
+        // replace('/').then(() => { deleteChat(chat.id) })
+        //'/chat/new'
       } else {
         // Delete the current chat and go to the max chatId
         replace(`/chat/${newChat.id}`).then(() => { deleteChat(chat.id) })

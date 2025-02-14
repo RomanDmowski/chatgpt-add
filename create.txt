@@ -1,0 +1,57 @@
+docker container create  --restart="yes"  --name cha4add -p 5173:5173 --env-file .env -v Client1_1.9.0-final_Workdir:/var/lls -v Client1_1.9.0-final_RecoveryDir:/var/lls-recovery artifactory.boschdevcloud.com/hor-docker-local/laserlocalization:lls-1.9.0-final
+
+
+docker container create:   https://docs.docker.com/reference/cli/docker/container/create/ 
+-e, --env		  Set environment variables
+--env-file		Read in a file of environment variables
+--expose		  Expose a port or a range of ports
+-h, --hostname		Container host name
+--ip		IPv4 address (e.g., 172.30.100.104)
+--mount		Attach a filesystem mount to the container
+--name		Assign a name to the container
+--network		Connect a container to a network
+-p, --publish		Publish a container's port(s) to the host
+-P, --publish-all		Publish all exposed ports to random ports
+--read-only		Mount the container's root filesystem as read only
+--restart	no	Restart policy to apply when a container exits
+--rm		Automatically remove the container and its associated anonymous volumes when it exits
+--runtime		Runtime to use for this container
+--security-opt		Security Options
+-u, --user		Username or UID (format: <name|uid>[:<group|gid>])
+--userns		User namespace to use
+-v, --volume		Bind mount a volume
+--volume-driver		Optional volume driver for the container
+--volumes-from		Mount volumes from the specified container(s)
+-w, --workdir		Working directory inside the container
+
+
+Examples:
+docker create -v /home/docker:/docker --name docker ubuntu 9aa88c08f319cd1e4515c3c46b0de7cc9aa75e878357b1e96f91e2c773029f03
+
+
++++++++++++++++++++++++++++++++++++++++++
+
+# First, build the image
+docker build -t chat4addcore .
+
+=> naming to docker.io/library/chat4addcore:latest
+
+docker container create --name chat4add --restart always --env-file .env -p 5173:5173  -v .:/app chat4addcore
+
+lub lepiej
+
+docker container create --name chat4add --restart always --env-file .env -p 8008:5173 chat4addcore
+
+chat.svelte
+
+docker container commit 6423f8f0b6c4 chat4add:latest
+
+# Then create the container
+docker create \
+  --name chat4add \
+  --restart always \
+  --env-file .env \
+  -p 5173:5173 \
+  -v "$(pwd)":/app \
+  chatgpt-add-chatgpt_web:latest
+

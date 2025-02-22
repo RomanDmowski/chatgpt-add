@@ -421,9 +421,9 @@
     </p> -->
 
 
-    <p class="control settings">
+    <!-- <p class="control settings">
       <button title="Chat/Profile Settings" class="button" on:click|preventDefault={showSettingsModal}><span class="icon"><Fa icon={faGear} /></span></button>
-    </p>
+    </p> -->
     
     
     

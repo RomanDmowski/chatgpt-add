@@ -85,7 +85,7 @@ const gptDefaults = {
   temperature: 1,
   top_p: 1,
   n: 1,
-  stream: true,
+  stream: false,
   stop: null,
   max_completion_tokens: 512,
   presence_penalty: 0,

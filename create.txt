@@ -40,11 +40,11 @@ docker container create --name chat4add --restart always --env-file .env -p 5173
 
 lub lepiej
 
-docker container create --name chat4add --restart always --env-file .env -p 8008:5173 chat4addcore
+docker container create --name chat4add --restart always --env-file .env -p 80:5173 chat4addcore
 
 chat.svelte
 
-docker container commit 6423f8f0b6c4 chat4add:latest
+docker container commit aaced2babbcac chat4add:latest
 
 # Then create the container
 docker create \

@@ -430,7 +430,10 @@
     <!-- <p class="control queue">
       <button title="Queue message, don't send yet" class:is-disabled={chatRequest.updating} class="button is-ghost" on:click|preventDefault={addNewMessage}><span class="icon"><Fa icon={faArrowUpFromBracket} /></span></button>
     </p> -->
+
+
     {#if chatRequest.updating}
+
     <p class="control send">
       <button title="Cancel Response" class="button is-danger" type="button" on:click={cancelRequest}><span class="icon">
         {#if waitingForCancel}
@@ -440,11 +443,15 @@
         {/if}
       </span></button>
     </p>
+
     {:else}
     <p class="control send">
       <button title="Send" class="button is-info" type="submit"><span class="icon"><Fa icon={faPaperPlane} /></span></button>
     </p>
     {/if}
+
+
+
   </form>
   <!-- a target to scroll to -->
   <div class="content has-text-centered running-total-container">

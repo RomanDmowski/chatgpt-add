@@ -89,7 +89,7 @@ For instances where immediate API responses are preferred, consider utilizing th
   * For instance, sending `d2 l10` configures the mocked API to delay the response by 2 seconds and to include 10 sentences.
 
 ## Desktop app
-
+Push01
 To use ChatGPT-web as a desktop application:
 
 * **Installation**: First, ensure [Rust is installed](https://www.rust-lang.org/tools/install) on your computer.

@@ -32,9 +32,9 @@
 <aside class="menu main-menu" class:pinned={$pinMainMenu} use:clickOutside={() => { $pinMainMenu = false }}>
   <div class="menu-expanse">
       <div class="navbar-brand menu-nav-bar">
-        <a class="navbar-item gpt-logo">
-          <img src={logo} alt="Chat4ADD" width="24" height="24" />
-          <p class="ml-2 is-size-5 has-text-weight-bold">Chat4ADD</p>
+        <a class="navbar-item" href={'https://www.add.org.pl'}>
+          <!-- <img src={logo} alt="Chat4ADD" width="24" height="24" /> -->
+          <p class="ml-2 is-size-5 is-pulled-left">ADD | Analizy Dane Dialog</p>
         </a>
         <div class="chat-option-menu navbar-item is-pulled-right">
           <ChatOptionMenu bind:chatId={activeChatId} />
@@ -82,8 +82,8 @@
           ></div>
         {:else}
         <div class="level-item">
-          <button on:click={async () => { $pinMainMenu = false; await startNewChatWithWarning(activeChatId) }} class="panel-block button" title="Start new chat with default profile" class:is-disabled={!hasModels}
-            ><span class="greyscale mr-1"><Fa icon={faSquarePlus} /></span> New chat</button>
+          <button on:click={async () => { $pinMainMenu = false; await startNewChatWithWarning(activeChatId) }} class="panel-block button" title="Rozpocznij nowy chat..." class:is-disabled={!hasModels}
+            ><span class="greyscale mr-1"><Fa icon={faSquarePlus} /></span> Nowy czat</button>
           </div>
         {/if}
       </div>

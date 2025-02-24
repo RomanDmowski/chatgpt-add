@@ -1,7 +1,7 @@
 <script lang="ts">
   import { params } from 'svelte-spa-router'
   import { pinMainMenu } from './Storage.svelte'
-  import logo from '../assets/logo.svg'
+  import logo from '../assets/add01.png'
   import ChatOptionMenu from './ChatOptionMenu.svelte'
   import Fa from 'svelte-fa/src/fa.svelte'
   import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons/index'

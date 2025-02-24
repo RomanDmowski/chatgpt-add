@@ -20,13 +20,13 @@
     <Typeahead
       data={prompts}
       {extract}
-      label="Select a pre-made prompt"
+      label="Wybierz jeden z przykładowych promptów"
       hideLabel
       showDropdownOnFocus
       showAllResultsOnFocus
       inputAfterSelect="clear"
       on:select={({ detail }) => inputPrompt(detail.original.prompt)}
-      placeholder="Select a pre-made prompt 👇"
+      placeholder="Wybierz jeden z przykładowych promptów 👇"
       let:result
     >
       <a class="dropdown-item" href="#top" on:click|preventDefault title="{result.original.prompt}">
@@ -41,6 +41,6 @@
 </div>
 
 <div class="columns is-centered">
-  <div class="column is-half has-text-centered">or type below:</div>
+  <div class="column is-half has-text-centered">lub wpisz poniżej twoje instrukcje:</div>
 </div>
 {/if}

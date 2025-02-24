@@ -400,7 +400,7 @@
     <p class="control is-expanded">
       <textarea
         class="input is-info is-focused chat-input auto-size"
-        placeholder="[{chat.settings.model}] Type your message here..."
+        placeholder="[{chat.settings.model}] Tutaj wpisz swoje instrukcje dla ChatGPT..."
         rows="1"
         on:keydown={e => {
           // Only send if Enter is pressed, not Shift+Enter

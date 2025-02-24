@@ -435,15 +435,12 @@
     {#if chatRequest.updating}
 
     <p class="control send">
-      <!-- <button title="Cancel Response" class="button is-danger" type="button" on:click={cancelRequest}><span class="icon"></span> -->
-      <button title="Cancel Response" class="button is-danger" type="button"><span class="icon">
-        <!-- {#if waitingForCancel}
+      <button title="Cancel Response" class="button is-danger" type="button" on:click={cancelRequest}><span class="icon">
+        {#if waitingForCancel}
         <Fa icon={faCircleCheck} />
         {:else}
         <Fa icon={faCommentSlash} />
-        {/if} -->
-
-        <Fa icon={faCommentSlash} />
+        {/if}
       </span></button>
     </p>
 
